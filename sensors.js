@@ -1,7 +1,7 @@
-window.addEventListener('deviceorientation', deviceorientation);
+window.addEventListener('deviceorientation', ondeviceorientation);
 
 //--------------------------------------------------------------
-function deviceorientation(event) 
+function ondeviceorientation(event) 
 { 
 	document.getElementById("id_alpha").innerHTML=event.alpha;
 	document.getElementById("id_beta").innerHTML=event.beta;
