@@ -16,6 +16,6 @@ function ondevicemotion(event)
 	var x_incl = Math.atan(ag.x / ag.z);
 	var y_incl = Math.atan(ag.y / ag.z);
 	
-	document.getElementById("id_acc_g").innerHTML = "AccG = " + Math.round(event.accelerationIncludingGravity.x * 10) / 10 + "" + Math.round(event.accelerationIncludingGravity.y * 10) / 10 + "incl_x = " x_incl + "incl+y = " + y+incl;
+	document.getElementById("id_acc_g").innerHTML = "AccG = " + Math.round(event.accelerationIncludingGravity.x * 10) / 10 + "" + Math.round(event.accelerationIncludingGravity.y * 10) / 10 + "incl_x = " x.incl + "incl+y = " + y.incl;
 	
 }
