@@ -11,7 +11,11 @@ window.addEventListener('devicemotion', ondevicemotion);
 //-------------------------------------------------------
 function ondevicemotion(event)
 {
-	document.getElementById("id_acc").innerHTML = Math.round(event.acceleration.x * 10) / 10 + "" + Math.round(event.acceleration.y * 10) / 10 + "" + Math.round(event.acceleration.x * 10) / 10;
-	document.getElementById("id_acc_g").innerHTML = Math.round(event.accelerationIncludingGravity.x * 10) / 10 + "" + Math.round(event.accelerationIncludingGravity.y * 10) / 10 + "" + Math.round(event.accelerationIncludingGravity.x * 10) / 10;
+	document.getElementById("id_acc").innerHTML = "Acc = " Math.round(event.acceleration.x * 10) / 10 + "" + Math.round(event.acceleration.y * 10) / 10 + "" + Math.round(event.acceleration.x * 10) / 10;
+	var ag = event.accelerationIncludingGravity;
+	var x_incl = Math.atan(ag.x / ag.z);
+	var y_incl = Math.atan(ag.y / ag.z);
+	
+	document.getElementById("id_acc_g").innerHTML = "AccG = " Math.round(event.accelerationIncludingGravity.x * 10) / 10 + "" + Math.round(event.accelerationIncludingGravity.y * 10) / 10 + "incl_x = " x_incl + "incl+y = " + y+incl;
 	
 }
