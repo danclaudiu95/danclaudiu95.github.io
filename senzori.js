@@ -13,7 +13,7 @@ window.addEventListener('devicemotion', ondevicemotion);
 
 
 //-------------------------------------------------------
-function deseneaza_cerc(gamma,beta)
+function deseneaza_cerc_canvas(gamma,beta)
 {
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas.getContext("2d");
@@ -36,10 +36,28 @@ function deseneaza_cerc(gamma,beta)
 }
 
 //-------------------------------------------------------
+function deseneaza_cerc_svg(gamma,beta)
+{
+	var svg = document.getElementById("id_svg");
+	var w = svg.getAttribute("width");
+	var h = svg.getAttribute("height");
+	
+	var cerc = document.getElementById("id_circle");
+	
+	var centru=(x : w /2, y : h /2);
+	var raza = cerc.getAttribute("r");
+	var max_deplasare_x = w / 2 - raza; 
+	var max_deplasare_y = h / 2 - raza;
+	
+	cerc.setAttribute("cx", centru.x + gamma / 90 * max_deplasare_x);
+	cerc.setAttribute("cy", centru.y + beta / 90 * max_deplasare_y);
+}
+
+//-------------------------------------------------------
 function ondevicemotion(event)
 {
-	deseneaza_cerc(gamma,beta);
-	
+	//deseneaza_cerc_canvas(gamma,beta);
+	deseneaza_cerc_svg(gamma,beta);
 	document.getElementById("id_acc").innerHTML = "Acc = " + Math.round(event.acceleration.x * 10) / 10 + " " + Math.round(event.acceleration.y * 10) / 10 + " " + Math.round(event.acceleration.z * 10) / 10;
 	
 	var ag = event.accelerationIncludingGravity;
