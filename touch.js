@@ -2,8 +2,11 @@ document.getElementById("id_logic_level_version").innerHTML="Business level vers
 
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");
+var rect = canvas.getBoundingClientRect();
 
 canvas.addEventListener("touchstart", on_touch_start);
+canvas.addEventListener("touchmove", on_touch_move);
+var touch_id=[]//this is a vector
 //----------------------------------------------------
 function generate_random_color()
 {
