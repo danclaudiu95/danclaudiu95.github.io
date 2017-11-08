@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.08.3";
+document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.08.4";
 
 var canvas = document.getElementById("id_canvas");
 var context = canvas.getContext("2d");
@@ -20,7 +20,7 @@ function on_touch_start(e)
 	var touches = e.changedTouches;
 	for (i=0; i < touches.length; i++)
 		{
-		touch_id.push(id:touches[i].identifier, color:generate_random_color());
+		touch_id.push((id:touches[i].identifier, color:generate_random_color()));
 		context.beginPath();
 		context.arc(touches[i].pageX - rect.left, touches[i].pageY - rect.top, 10, 0, 2 * Math.PI);
 		context.strokeStyle = touch_id[touch_id.length - 1].color;
