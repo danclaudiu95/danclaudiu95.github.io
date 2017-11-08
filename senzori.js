@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.01.1";
+document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.01.7";
 window.addEventListener('deviceorientation', ondeviceorientation);
 window.addEventListener('devicemotion', ondevicemotion);
 //-------------------------------------------------------
@@ -25,11 +25,14 @@ function deseneaza_patrat_canvas(alfa, gamma, beta)
 	var latura = 10;
 	var max_deplasare_x = w / 2 - raza; 
 	var max_deplasare_y = h / 2 - raza;
+	var centru_patrat = (x: centru.x + gamma / 90 * max_deplasare_x, y: centru.y + beta / 90 * max_deplasare_y);
+	context.translate(centru_patrat.x,centru_patrat.y);
+	context.rotate(alpha / 180 * Math.PI);
 	//gamma == 0 -> centru.x
 	//gamma == -90 -> 0 + raza
 	//gamma = 90 -> w - raza;
 	//context.arc(centru.x + gamma / 90 * max_deplasare_x, centru.y + beta / 90 * max_deplasare_y, 10, 0, 2* Math.PI);
-	context.strokeRect(centru.x-latura / 2 + gamma / 90 * max_deplasare_x, centru.y - latura / 2 + beta / 90 * max_deplasare_y , latura, latura);
+	context.strokeRect(- latura / 2 , -latura / 2, latura, latura);
 	context.stroke();
 }
 
