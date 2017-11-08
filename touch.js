@@ -18,7 +18,7 @@ function on_touch_start(e)
 {
 	var rect = canvas.getBoundingClientRect();
 	var touches = e.changedTouches;
-	for (i=0; i < touches.length, i++)
+	for (i=0; i < touches.length; i++)
 		{
 		context.beginPath();
 		context.arc(touches[i].pageX - rect.left, touches[i].pageY - rect.top, 10, 0, 2 * Math.PI);
