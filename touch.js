@@ -34,10 +34,17 @@ function on_touch_move(e)
 {
 	var touches = e.changedTouches;
 	for(i=0; i < touches.length; i++){
+		var color = "#FFFFFF";
+		for(j=0;j < touch_id.length;j++) 
+			if(touches[i].identifier == touch_id[j].id) {
+				color = touch_id[j].color;
+				break;
+			}
+				
 		context.beginPath();
 		context.arc(touches[i].pageX - rect.left, touches[i].pageY - rect.top, 10, 0, 2 * Math.PI);
-		context.strokeStyle = 
-		context.fillStyle = contex.strokeStyle;
+		context.strokeStyle = color;
+		context.fillStyle = color;
 		context.fill();
 		context.stroke();
 	}
