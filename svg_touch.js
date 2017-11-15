@@ -10,7 +10,7 @@ function on_touch_start(e)
 	for(var i = 0; i < touches.length; i++){
 	var circle = document.createElementNS("https://www.w3.org/2000/svg", "circle");
 		circle.setAttribute("cx", touches[i].pageX - rect_svg.left);
-		circle.setAttribute("cy", touches[i].pageY - rect_svg.right);
+		circle.setAttribute("cy", touches[i].pageY - rect_svg.top);
 		circle.setAttribute("r", 10);
 		
 		svg.appendChild(circle);
