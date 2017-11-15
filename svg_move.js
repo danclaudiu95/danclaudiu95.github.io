@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.15.1";
+document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.15.2";
 var circle1 = document.getElementById("id_circle1");
 var circle2 = document.getElementById("id_circle2");
 
@@ -18,7 +18,7 @@ function on_touch_move(e)
 	for (var i = 0; i < touches.length; i++){
 		var circle = touches[i].target;
 		circle.setAttribute("cx", touches[i].pageX - rect_svg.left);
-		circle.setAttribute("cx", touches[i].pageX - rect_svg.top);
+		circle.setAttribute("cy", touches[i].pageY - rect_svg.top);
 
 	}
 
