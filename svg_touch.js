@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.15.5";
+document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.15.6";
 
 addEventListener("touchstart", on_touch_start);
 var svg = document.getElementById("id_svg");
