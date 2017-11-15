@@ -7,9 +7,9 @@ function on_touch_start(e)
 	var touches = e.changedTouches;
 	for(var i = 0; touches.length; i++){
 	var circle = document.createElementNS("https://www.w3.org/2000/svg2", "circle");
-		cerc.setAttribute("cx", touches[i].pageX);
-		cerc.setAttribute("cy", touches[i].pageY);
-		cerc.setAttribute("r", 10);
+		circle.setAttribute("cx", touches[i].pageX);
+		circle.setAttribute("cy", touches[i].pageY);
+		circle.setAttribute("r", 10);
 		var svg = document.getElementById("id_svg");
 		svg.appendChild(circle);
 
