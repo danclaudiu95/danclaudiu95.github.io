@@ -53,7 +53,7 @@ function on_touch_move(e)
 	//touches.length - numarul de apasari/de degete care ating ecranul la un moment dat
 	for (var i = 0; i < touches.length; i++){
 		if( touches[i].pageX - rect_canvas.left < top_x + img_width && touches[i].pageY - rect_canvas.left >= top_x &&
-		touches[i].pageY - rect_canvas.top; < top_y + img_height && touches[i].pageY >= top_y - rect_canvas.top) {
+		touches[i].pageY - rect_canvas.top < top_y + img_height && touches[i].pageY >= top_y - rect_canvas.top) {
 			context.clearRect();
 			top_x = touches[i].pageX - rect_canvas.left;
 			top_y = touches[i].pageY - rect_canvas.top;
