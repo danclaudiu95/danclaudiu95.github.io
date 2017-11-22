@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.22.5";
+document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.22.6";
 
 var synt = window.speechSynthesis;
 
@@ -16,6 +16,10 @@ function speak()
 	var enunt = new SpeechSynthesisUtterance();
 	enunt.lang = "it-IT";
 	enunt.text = document.getElementById("id_text").value;
+	
+	enunt.onerror = function(e){
+		alert(e.error)
+	}
 	synt.speak(enunt);
 	
 }
