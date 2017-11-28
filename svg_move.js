@@ -1,4 +1,5 @@
-document.getElementById("id_logic_level_version").innerHTML="Business level version 2017.11.15.3";
+ document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.15.2"; 
+
 var circle1 = document.getElementById("id_circle1");
 var circle2 = document.getElementById("id_circle2");
 
@@ -8,26 +9,22 @@ circle2.addEventListener("touchmove", on_touch_move);
 var svg = document.getElementById("id_svg");
 var rect_svg = svg.getBoundingClientRect();
 
-//-----------------------------------------------
+//----------------------------------------
 function on_touch_move(e)
-
 {
 	e.preventDefault();
+	
 	var touches = e.changedTouches;
-
 	for (var i = 0; i < touches.length; i++){
 		var circle = touches[i].target;
-		if (touches[i].pageX <= rect_svg.width &&
-		touches[i].pageY <= rect_svg.height &&
-		touches[i].pageX - rect_svg.left >= 0 &&
-		touches[i].pageY - rect_svg.top >= 0
-		) {
-		
-		circle.setAttribute("cx", touches[i].pageX - rect_svg.left);
-		circle.setAttribute("cy", touches[i].pageY - rect_svg.top);
-
+		if (touches[i].pageX - rect_svg.left <= rect_svg.width && 
+			touches[i].pageY - rect_svg.top <= rect_svg.height &&
+			touches[i].pageX - rect_svg.left >= 0 &&
+			touches[i].pageY - rect_svg.top >= 0
+			){
+			circle.setAttribute("cx", touches[i].pageX - rect_svg.left);
+			circle.setAttribute("cy", touches[i].pageY - rect_svg.top);
+		}
 	}
-
 }
-
-//-----------------------------------------------
+//----------------------------------------
