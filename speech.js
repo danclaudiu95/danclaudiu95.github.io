@@ -1,5 +1,5 @@
 //touchstart - eveniment ce se activeaza cand atingeam ecranul
-document.getElementById("id_business_level_version").innerHTML = "Business level version: 2017.11.29.3"; 
+document.getElementById("id_business_level_version").innerHTML = "Business level version: 2017.11.29.4"; 
 
 document.addEventListener("touchstart", on_touch_start);
 
@@ -21,8 +21,9 @@ function on_touch_start(e)
 function on_speech_result(e)
 {
 	var alternatives = e.results[0];
-	for (var i = 0; i < alternatives.length; i++){
-	document.getElementById("id_p").innerHTML += alternatives[0][0].transcript + "("+alternatives[0][0].confidence+")";
+	for (var i = 0; i < alternatives.length; i++)
+	document.getElementById("id_p").innerHTML += alternatives[0][0].transcript + "("+alternatives[0][0].confidence+")"+"<br>";
+	
 }
 
 function on_sound_end(e)
