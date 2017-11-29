@@ -10,12 +10,15 @@ recognition.onsoundend = on_sound_end();
 //vor rula doar cand iti returneaza google cuvintele recunoscute
 function on_touch_start(e)
 {
-	recognition.start();
+	if(!is_listening) {
+		recognition.start();
+		is_listening = true;
+	}
 }
 
 function on_speech_result(e)
 {
-	document.getElementById("id_p").innerHTML = e.results[0][0].transcript;
+	document.getElementById("id_p").innerHTML = e.results[0][0].transcript + "("+e.results[0][0].confidence+")";
 }
 
 function on_sound_end(e)
