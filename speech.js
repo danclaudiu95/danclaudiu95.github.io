@@ -1,9 +1,9 @@
 //touchstart - eveniment ce se activeaza cand atingeam ecranul
-document.getElementById("id_bunsiness_level_version").innerHTML = "Business level version: 2017.11.29.0"; 
+document.getElementById("id_bunsiness_level_version").innerHTML = "Business level version: 2017.11.29.1"; 
 
 document.addEventListener("touchstart", on_touch_start);
 
-var recognition = new SpeechRecognition();
+var recognition = new webkitSpeechRecognition();
 recognition.lang = "en-US";
 recognition.onresult = on_speech_result();
 recognition.onsoundend = on_sound_end();
@@ -23,5 +23,6 @@ function on_speech_result(e)
 
 function on_sound_end(e)
 {
-	
+	recognition.stop();
+	is_listening = false;
 }
