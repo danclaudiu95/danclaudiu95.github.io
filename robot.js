@@ -1,5 +1,5 @@
 //touchstart - eveniment ce se activeaza cand atingeam ecranul
-document.getElementById("id_business_level_version").innerHTML = "Business level version: 2017.11.29.2"; 
+document.getElementById("id_business_level_version").innerHTML = "Business level version: 2017.11.29.3"; 
 
 document.addEventListener("touchstart", on_touch_start);
 
@@ -34,7 +34,7 @@ function on_speech_result(e)
 				break;
 				//....
 			default:
-				speak("I am studpid!");
+				speak("Idiot xiaomi!!");
 			
 		
 		}
