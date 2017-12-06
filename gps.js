@@ -1,6 +1,6 @@
-document.getElementById("id_business_level_version").innerHTML = "Business level version: 2017.12.06.3"; 
+document.getElementById("id_business_level_version").innerHTML = "Business level version: 2017.12.06.4"; 
 // fara () se apeleaza doar pointer la functie
-navigator.geolocation.getCurrentPosition(on_gps_success, on_gps_error);
+navigator.geolocation.WatchPosition(on_gps_success, on_gps_error);
 
 //--------------------------------
 function on_gps_success(p)
