@@ -1,9 +1,8 @@
-var d = new Date("July 21, 1983 01:15:00");
-var n = d.getDate();
+var d = new Date();
 
 document.getElementById("id_logic_level_version").innerHTML = 
 	"Business level version: "
-	+d.getFullYear() +"." +d.getMonth() + "1"+"." +d.getDate() +"1"+".3"; 
+	+d.getFullYear() +"." +d.getMonth() + "1"+"." +d.getDate() +"1"+".4"; 
 
 //pentru accesul webcamerei:
 var constraints = {audio:true, video: {facingMode:"environment"}};	
