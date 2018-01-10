@@ -15,6 +15,6 @@ function stop_timer()
 //-------------------------------------------------
 function vibrate()
 {
-	windows.navigator.vibrate(300);
+	window.navigator.vibrate(300);
 }
 //-------------------------------------------------
