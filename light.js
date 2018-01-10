@@ -1,4 +1,4 @@
-windows.addEventListener("devicelight", device_light);
+window.addEventListener("devicelight", device_light);
 
 function device_light (e)
 {
