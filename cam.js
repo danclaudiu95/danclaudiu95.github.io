@@ -2,7 +2,7 @@ var d = new Date();
 
 document.getElementById("id_logic_level_version").innerHTML = 
 	"Business level version: "
-	+d.getFullYear() +"." +d.getMonth() + "1"+"." +d.getDate()+".9"; 
+	+d.getFullYear() +"." +d.getMonth() + "1"+"." +d.getDate()+".10"; 
 
 //pentru accesul webcamerei:
 var constraints = {audio:false, video: {facingMode:"environment"}};	
@@ -36,6 +36,6 @@ function snap()
 
 function download()
 {
-	var my_image = canvas.toDataURL("image/png");
+	var my_image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
 	windows.location.href = my_image;
 }
