@@ -9,7 +9,8 @@ function start_timer()
 //-------------------------------------------------
 function stop_timer()
 {
-	clearInterval(vibrate, 300);
+	window.navigator.vibrate(0);
+	clearInterval(timer_id);
 }
 //-------------------------------------------------
 function vibrate()
